@@ -27,6 +27,7 @@ Egyenes
 Maximális növekedés iránya és rátája
 # Differenciál geometria
 # Geometriai modellezés
+Pontok definíciója
 # Transzformációk
 # 2D képszintézis
 # OpenGL és GPU programozás
