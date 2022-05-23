@@ -21,10 +21,13 @@ Egyenes
   - Egyik vetkor vetülete a másikra * másik hossza
 - Kereszt szorzat
   - Egyik vektor vetülete a másikra merőleges síkra
-    - Sakktábla szabály
+  - Sakktábla szabály
 
 ## Gradiens
-Maximális növekedés iránya és rátája
+Maximális növekedés iránya és rátája  
+Merőleges az irányvektorral
+
+
 # Differenciál geometria
 # Geometriai modellezés
 Pontok definíciója
