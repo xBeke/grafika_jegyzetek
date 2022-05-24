@@ -250,10 +250,80 @@ s_x&0&0&0\\
 =[x',y',z',1]
 $$
 
-# 2D képszintézis
-# OpenGL és GPU programozás
-# Textúrázás
-# 3D képszintézis fizikai alapjai
-# Sugárkövetés
-# 3D Inkrementális képszintézis
-# Fraktálok
+## Projektív sík
+>Homogén koordinátákkal számszerűsíthetjük a végtelent
+
+### Euklidészi pont
+$$
+(x,y) => [x,y,1]
+$$
+### Homogén pont
+$$
+(x,y) => [x\cdot w, y\cdot w, w] = [X,Y,w]
+$$
+
+Homogén osztással, visszatérhetünk az Euklidészi térbe:
+$$
+x=\frac{X}{w}, y=\frac{Y}{w}, w\not ={0}
+$$
+
+Ideális pont:
+$$
+[X,Y,0]
+$$
+Itt találkoznak a végtelenben az egyenesek
+
+### Projektív egyenes
+
+- Euklideszi egyenes, Descartes koords
+  - $n_xx+n_yy+c=0$
+- Euklideszi egyenes, homogén koords
+  - $n_x\frac{X}{w}+n_y\frac{Y}{w}+c=0$
+- Euklideszi egyenes
+  - $n_xX+n_yY+cw=0, w \not ={0}$
+- Projektív egyenes
+  - $n_xX+n_yY+cw=0$
+- Projektív egyenes mátrixokkal:
+  - $[X,Y,w]\begin{bmatrix}n_x\\n_y\\c\end{bmatrix}=0$
+
+### Metszés és illeszkedés
+- Pontokra illeszthető egyenes
+  - $p_1\times p_2$
+- Egyenesek metszéspontja
+  - $l_1\times l_2$
+- p ponton átmenő L egyenesre merőleges
+  - $p\times L$
+
+## Projektív tér
+>Homogén koordinátákkal számszerűsíthetjük a végtelent
+
+### Euklidészi pont
+$$
+(x,y,z) => [x,y,z,1]
+$$
+### Homogén pont
+$$
+(x,y) => [x\cdot w, y\cdot w, z\cdot w, w] = [X,Y,Z,w]
+$$
+
+Homogén osztással, visszatérhetünk az Euklidészi térbe:
+$$
+x=\frac{X}{w}, y=\frac{Y}{w},z=\frac{Z}{w}, w\not ={0}
+$$
+
+Ideális pont:
+$$
+[X,Y,Z,0]
+$$
+Itt találkoznak a végtelenben az egyenesek
+
+### Egyenes paraméteres egyenlete
+$$
+[X(t),Y(t),Z(t),w(t)]= [X_1,Y_1,Z_1,w_1](1-t)+[X_2,Y_2,Z_2,w_2]t
+$$
+
+### Sík implicit egyenlete:
+$$
+n_xX+n_yY+n_zZ+dw=0
+$$
+
