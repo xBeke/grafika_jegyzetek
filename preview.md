@@ -187,7 +187,69 @@ $|r-f_1|+|r-f_2|=C$
 $|r-f_1|-|r-f_2|=C$
 #### Paraboloid
 $|r-f|=|n^0\cdot (r-p)|$
+
+### Álltalános kvadratikus alak
+$$
+f(x,y,z)=[x,y,z,1]Q
+\begin{bmatrix}
+x\\
+y\\
+z\\
+1\\
+\end{bmatrix}
+$$
 # Transzformációk
+Affin transzformáció
+- Párhuzamost ls egyenest tartó
+- Eltolás, elforgatás,nyújtás, nyírás, tükrözés
+
+Minden ilyen transzformáció kifejezhető egy mátrix szorzással, amelyben a sorok rendre a bázisvektorok és az origo:
+
+$$
+[x,y,1]
+\begin{bmatrix}
+i'_x&i'_y&0\\
+j'_x&j'_y&0\\
+o'_x&o'_y&1\\
+\end{bmatrix}
+=[x',y',1]
+$$
+
+## 2D forgatás
+$$
+[x,y,1]
+\begin{bmatrix}
+cos(\phi)&sin(\phi)&0\\
+-sin(\phi)&cos(\phi)&0\\
+0&0&1\\
+\end{bmatrix}
+=[x',y',1]
+$$
+
+## 3D eltolás
+$$
+[x,y,z,1]
+\begin{bmatrix}
+1&0&0&0\\
+0&1&0&0\\
+0&0&1&0\\
+v_x&v_y&v_z&1\\
+\end{bmatrix}
+=[x',y',z',1]
+$$
+
+## 3D skálázás
+$$
+[x,y,z,1]
+\begin{bmatrix}
+s_x&0&0&0\\
+0&s_y&0&0\\
+0&0&s_z&0\\
+0&0&0&1\\
+\end{bmatrix}
+=[x',y',z',1]
+$$
+
 # 2D képszintézis
 # OpenGL és GPU programozás
 # Textúrázás
