@@ -1,9 +1,18 @@
+---
+title: "Grafika"
+author: Beke Ambrus
+date: May 24, 2022
+geometry: margin=2cm
+output: pdf_document
+---
 # Geometriák és algebrák
 
 ## Euklidészi síkgeometria
+
 Pontok  
 Vektorok  
-Egyenes
+Egyenes  
+
 - Paraméteres egyenlet
 - Implicit egyenlet
 - Távolság
@@ -45,10 +54,16 @@ $$
 
 ## Segítő műveletek
 $$
-Távolság: |p-q|\\
-Merőleges: p\cdot q=0\\
-Párhuzamos: p\times q=0\\
-Vetület: v^0\cdot p
+Távolság: |p-q|
+$$
+$$
+Merőleges: p\cdot q=0\\  
+$$
+$$
+Párhuzamos: p\times q=0\\  
+$$
+$$
+Vetület: v^0\cdot p  
 $$
 
 ## Egyenes
@@ -158,20 +173,20 @@ $$
   - $p_{i+1}=r(t_{i+1})$ pont
   - $v_{i+1}=\dot{r}(t_{i+1})$ sebesség vektor
 
-> $r(t)=a_3(t-t_i)^3+a_2(t-t_i)^2+a_1(t-t_i)+a_0$  
+$r(t)=a_3(t-t_i)^3+a_2(t-t_i)^2+a_1(t-t_i)+a_0$  
 $\dot{r}(t)=3a_3(t-t_i)^2+2a_2(t-t_i)+a_1$
 
----
+
 $r(t_i)=a_0=p_i$  
 $r(t_i+1)=a_3(t_{i+1}-t_i)^3+a_2(t_{i+1}-t_i)^2+a_1(t_{i+1}-t_i)+a_0=p_{i+1}$  
 $\dot{r}(t_i)=a_1=v_i$  
 $\dot{r}(t_i+1)=3a_3(t_{i+1}-t_i)^2+2a_2(t_{i+i}-t_i)+a_1=v_{i+1}$
 
 Az egyenletek megoldása:  
-> $a_0=p_i$  
-> $a_1=v_i$  
-> $a_2=\frac{3(p_{i+1}-p_i)}{(t_{i+1}-t_i)^2}-\frac{(v_{i+1}+2v_i)}{t_{i+1}-t_i}$  
-> $a_3=\frac{2(p_i-p_{i+1})}{(t_{i+1}-t_i)^3}+\frac{(v_{i+1}+v_i)}{(t_{i+1}-t_i)^2}$
+$a_0=p_i$  
+$a_1=v_i$  
+$a_2=\frac{3(p_{i+1}-p_i)}{(t_{i+1}-t_i)^2}-\frac{(v_{i+1}+2v_i)}{t_{i+1}-t_i}$  
+$a_3=\frac{2(p_i-p_{i+1})}{(t_{i+1}-t_i)^3}+\frac{(v_{i+1}+v_i)}{(t_{i+1}-t_i)^2}$
 
 ### Bezier approximácio
 
