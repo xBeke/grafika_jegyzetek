@@ -129,7 +129,7 @@ $$
   - $p_{i+1}=r(t_{i+1})$ pont
   - $v_{i+1}=\dot{r}(t_{i+1})$ sebesség vektor
 
-$r(t)=a_3(t-t_i)^3+a_2(t-t_i)^2+a_1(t-t_i)+a_0$  
+> $r(t)=a_3(t-t_i)^3+a_2(t-t_i)^2+a_1(t-t_i)+a_0$  
 $\dot{r}(t)=3a_3(t-t_i)^2+2a_2(t-t_i)+a_1$
 
 ---
@@ -140,10 +140,10 @@ $\dot{r}(t_i+1)=3a_3(t_{i+1}-t_i)^2+2a_2(t_{i+i}-t_i)+a_1=v_{i+1}$
 
 ---
 Az egyenletek megoldása:  
-$a_0=p_i$  
-$a_1=v_i$  
-$a_2=\frac{3(p_{i+1}-p_i)}{(t_{i+1}-t_i)^2}-\frac{(v_{i+1}+2v_i)}{t_{i+1}-t_i}$  
-$a_3=\frac{2(p_i-p_{i+1})}{(t_{i+1}-t_i)^3}+\frac{(v_{i+1}+v_i)}{(t_{i+1}-t_i)^2}$
+> $a_0=p_i$  
+> $a_1=v_i$  
+> $a_2=\frac{3(p_{i+1}-p_i)}{(t_{i+1}-t_i)^2}-\frac{(v_{i+1}+2v_i)}{t_{i+1}-t_i}$  
+> $a_3=\frac{2(p_i-p_{i+1})}{(t_{i+1}-t_i)^3}+\frac{(v_{i+1}+v_i)}{(t_{i+1}-t_i)^2}$
 
 ### Bezier approximácio
 - $B_i(t):$ ne oszcilláljon
@@ -153,8 +153,40 @@ $$
 $$
 r(t)=\sum_{i=0}^nB_i(t)r_i
 $$
-### Catmill-Rom spline
 
+### Catmull-Rom spline
+$$
+v_i=\frac{1}{2} \left(
+  \frac{r_{i+1}-r_i}{t_{i+1}-t_i}+
+  \frac{r_i-r_{i-1}}{t_i-t_{i-1}}
+  \right)$$
+## Felületek
+- Explicit: $z=h(x,y)$ (magasságmező)  
+- Implicit: $f(x,y,z)=0$  
+  - Gömb 
+    - $(x-c_x)^2+(y-c_y)^2+(z-c_z)^2-R^2=0$
+  - Sík
+    - $ax+by+cz+d=0$
+- Parametrikus
+  - $x=x(u,v)$
+  - $y=y(u,v)$
+  - $z=z(u,v)$
+  - Gömb:
+    - $x(u,v)=c_x+Rcos(u)sin(v)$
+    - $y(u,v)=c_y+Rsin(u)sin(v)$
+    - $z(u,v)=c_z+Rcos(v)$
+    - $u\in[0,2\pi),v\in[0,\pi)$
+### Implicit felületek
+#### Gömb
+$|r-c|=R$
+#### Henger
+$|r-(p+v^0\cdot((r-p)\cdot v^0))|$=R
+#### Ellipszoid
+$|r-f_1|+|r-f_2|=C$
+#### Hiperboloid
+$|r-f_1|-|r-f_2|=C$
+#### Paraboloid
+$|r-f|=|n^0\cdot (r-p)|$
 # Transzformációk
 # 2D képszintézis
 # OpenGL és GPU programozás
