@@ -1,4 +1,5 @@
 # Geometriák és algebrák
+
 ## Euklidészi síkgeometria
 Pontok  
 Vektorok  
@@ -9,9 +10,13 @@ Egyenes
 - Szög
 
 ## Gömbi geometria
+
 ## Hiperbolikus geometria
+
 ## Poincaré diszk
+
 ## Projektív geometria
+
 ## Műveletek vetorokkal
 - Összeadás
   - Eltolás
@@ -28,12 +33,16 @@ Maximális növekedés iránya és rátája
 Merőleges az irányvektorral
 
 # Differenciál geometria
+
 ## Görbület
 $$
 \frac{N*r''}{r'^2}
 $$
+
 # Geometriai modellezés
+
 ## Pontok definíciója
+
 ## Segítő műveletek
 $$
 Távolság: |p-q|\\
@@ -41,7 +50,9 @@ Merőleges: p\cdot q=0\\
 Párhuzamos: p\times q=0\\
 Vetület: v^0\cdot p
 $$
+
 ## Egyenes
+
 Egyenes implicit egyenlete
 $$
 n*(r \cdot p)=0
@@ -52,7 +63,9 @@ $$
 $$
 ax+by+c=0
 $$
+
 ## Kör
+
 Ugyanakkora távolság egy ponttól
 $$
 |r-c|=R
@@ -60,22 +73,30 @@ $$
 $$
 (x-c_x)^2+(y-c_y)^2-R^2=0
 $$
+
 ## Ellipszis
+
 Ugyanakkora legyen a távolság összege 2 ponttól (fókuszponttól)
 $$
 |r-f_1|+|r-f_2|=C
 $$
+
 ## Hiperbola
+
 Ugyanakkora legyen a távolság külöbsége két ponttól
 $$
 |r-f_1|-|r-f_2|=C
 $$
+
 ## Parabola
+
 Azon pontok halamaza, amelynek a ponttól mér távolsága megyezik egy egyenestől mért távolsággal
 $$
 |r-f|=|n^0\cdot(r-p)|
 $$
+
 ## Kvadratikus görbék álltalános alakja
+
 $$
 f(x,y)=a_{11}x^2+a_{22}y^2+2a_{12}xy+2a_{13}x+2a_{23}y+3a_{33}
 $$
@@ -95,8 +116,11 @@ y\\
 1\\
 \end{bmatrix}
 $$
+
 ## Görbék
+
 ### Egyenes
+
 - Parametrikus egyenlet  
 - Egy állandó sebességű mozgás
 $$
@@ -104,7 +128,9 @@ x(t)=x_0+v_xt\\
 y(t)=y_0+v_yt\\
 z(t)=z_0+v_zt\\
 $$
+
 ### Kör
+
 $$
 x(t)=c_x+Rcos(t)\\
 y(t)=c_y+Rsin(t)\\
@@ -112,12 +138,15 @@ t\in[0,2\pi)
 $$
 
 ## Szabadformájú görbék
+
 ### Lagrange interpoláió
+
 $$ L_i(t)=\frac{\prod_{i\not ={j}}(t-t_j)}{\prod_{i\not ={j}}(t_i-t_j)} $$
 $$ r(t)=\sum_iL_i(t)r_i
 $$
 
 ### Hermite interpoláció
+
 - nem csak helyet adunk meg hanem:
   - Sebesség (r')
   - Gyorsulás (r'')
@@ -138,7 +167,6 @@ $r(t_i+1)=a_3(t_{i+1}-t_i)^3+a_2(t_{i+1}-t_i)^2+a_1(t_{i+1}-t_i)+a_0=p_{i+1}$
 $\dot{r}(t_i)=a_1=v_i$  
 $\dot{r}(t_i+1)=3a_3(t_{i+1}-t_i)^2+2a_2(t_{i+i}-t_i)+a_1=v_{i+1}$
 
----
 Az egyenletek megoldása:  
 > $a_0=p_i$  
 > $a_1=v_i$  
@@ -146,6 +174,7 @@ Az egyenletek megoldása:
 > $a_3=\frac{2(p_i-p_{i+1})}{(t_{i+1}-t_i)^3}+\frac{(v_{i+1}+v_i)}{(t_{i+1}-t_i)^2}$
 
 ### Bezier approximácio
+
 - $B_i(t):$ ne oszcilláljon
 $$
 B_i(t)=\binom{n}{i}t^i(1-t)^{n-i}
@@ -155,12 +184,15 @@ r(t)=\sum_{i=0}^nB_i(t)r_i
 $$
 
 ### Catmull-Rom spline
+
 $$
 v_i=\frac{1}{2} \left(
   \frac{r_{i+1}-r_i}{t_{i+1}-t_i}+
   \frac{r_i-r_{i-1}}{t_i-t_{i-1}}
   \right)$$
+
 ## Felületek
+
 - Explicit: $z=h(x,y)$ (magasságmező)  
 - Implicit: $f(x,y,z)=0$  
   - Gömb 
@@ -176,19 +208,31 @@ v_i=\frac{1}{2} \left(
     - $y(u,v)=c_y+Rsin(u)sin(v)$
     - $z(u,v)=c_z+Rcos(v)$
     - $u\in[0,2\pi),v\in[0,\pi)$
+    - 
 ### Implicit felületek
+
 #### Gömb
+
 $|r-c|=R$
+
 #### Henger
+
 $|r-(p+v^0\cdot((r-p)\cdot v^0))|$=R
+
 #### Ellipszoid
+
 $|r-f_1|+|r-f_2|=C$
+
 #### Hiperboloid
+
 $|r-f_1|-|r-f_2|=C$
+
 #### Paraboloid
+
 $|r-f|=|n^0\cdot (r-p)|$
 
 ### Álltalános kvadratikus alak
+
 $$
 f(x,y,z)=[x,y,z,1]Q
 \begin{bmatrix}
@@ -198,7 +242,9 @@ z\\
 1\\
 \end{bmatrix}
 $$
+
 # Transzformációk
+
 Affin transzformáció
 - Párhuzamost ls egyenest tartó
 - Eltolás, elforgatás,nyújtás, nyírás, tükrözés
@@ -216,6 +262,7 @@ o'_x&o'_y&1\\
 $$
 
 ## 2D forgatás
+
 $$
 [x,y,1]
 \begin{bmatrix}
@@ -227,6 +274,7 @@ cos(\phi)&sin(\phi)&0\\
 $$
 
 ## 3D eltolás
+
 $$
 [x,y,z,1]
 \begin{bmatrix}
@@ -239,6 +287,7 @@ v_x&v_y&v_z&1\\
 $$
 
 ## 3D skálázás
+
 $$
 [x,y,z,1]
 \begin{bmatrix}
@@ -251,13 +300,17 @@ s_x&0&0&0\\
 $$
 
 ## Projektív sík
+
 >Homogén koordinátákkal számszerűsíthetjük a végtelent
 
 ### Euklidészi pont
+
 $$
 (x,y) => [x,y,1]
 $$
+
 ### Homogén pont
+
 $$
 (x,y) => [x\cdot w, y\cdot w, w] = [X,Y,w]
 $$
@@ -287,6 +340,7 @@ Itt találkoznak a végtelenben az egyenesek
   - $[X,Y,w]\begin{bmatrix}n_x\\n_y\\c\end{bmatrix}=0$
 
 ### Metszés és illeszkedés
+
 - Pontokra illeszthető egyenes
   - $p_1\times p_2$
 - Egyenesek metszéspontja
@@ -295,13 +349,17 @@ Itt találkoznak a végtelenben az egyenesek
   - $p\times L$
 
 ## Projektív tér
+
 >Homogén koordinátákkal számszerűsíthetjük a végtelent
 
 ### Euklidészi pont
+
 $$
 (x,y,z) => [x,y,z,1]
 $$
+
 ### Homogén pont
+
 $$
 (x,y) => [x\cdot w, y\cdot w, z\cdot w, w] = [X,Y,Z,w]
 $$
@@ -318,11 +376,13 @@ $$
 Itt találkoznak a végtelenben az egyenesek
 
 ### Egyenes paraméteres egyenlete
+
 $$
 [X(t),Y(t),Z(t),w(t)]= [X_1,Y_1,Z_1,w_1](1-t)+[X_2,Y_2,Z_2,w_2]t
 $$
 
 ### Sík implicit egyenlete:
+
 $$
 n_xX+n_yY+n_zZ+dw=0
 $$
