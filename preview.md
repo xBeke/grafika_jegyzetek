@@ -111,6 +111,50 @@ y(t)=c_y+Rsin(t)\\
 t\in[0,2\pi)
 $$
 
+## Szabadformájú görbék
+### Lagrange interpoláió
+$$ L_i(t)=\frac{\prod_{i\not ={j}}(t-t_j)}{\prod_{i\not ={j}}(t_i-t_j)} $$
+$$ r(t)=\sum_iL_i(t)r_i
+$$
+
+### Hermite interpoláció
+- nem csak helyet adunk meg hanem:
+  - Sebesség (r')
+  - Gyorsulás (r'')
+- Ami a számításhoz kell:
+  - $t_i$ időpillanat
+  - $p_i=r(t_i)$ pont
+  - $v_i=\dot{r}(t_i)$ sebesség vektor
+  - $t_{i+1}$ időpillanat
+  - $p_{i+1}=r(t_{i+1})$ pont
+  - $v_{i+1}=\dot{r}(t_{i+1})$ sebesség vektor
+
+$r(t)=a_3(t-t_i)^3+a_2(t-t_i)^2+a_1(t-t_i)+a_0$  
+$\dot{r}(t)=3a_3(t-t_i)^2+2a_2(t-t_i)+a_1$
+
+---
+$r(t_i)=a_0=p_i$  
+$r(t_i+1)=a_3(t_{i+1}-t_i)^3+a_2(t_{i+1}-t_i)^2+a_1(t_{i+1}-t_i)+a_0=p_{i+1}$  
+$\dot{r}(t_i)=a_1=v_i$  
+$\dot{r}(t_i+1)=3a_3(t_{i+1}-t_i)^2+2a_2(t_{i+i}-t_i)+a_1=v_{i+1}$
+
+---
+Az egyenletek megoldása:  
+$a_0=p_i$  
+$a_1=v_i$  
+$a_2=\frac{3(p_{i+1}-p_i)}{(t_{i+1}-t_i)^2}-\frac{(v_{i+1}+2v_i)}{t_{i+1}-t_i}$  
+$a_3=\frac{2(p_i-p_{i+1})}{(t_{i+1}-t_i)^3}+\frac{(v_{i+1}+v_i)}{(t_{i+1}-t_i)^2}$
+
+### Bezier approximácio
+- $B_i(t):$ ne oszcilláljon
+$$
+B_i(t)=\binom{n}{i}t^i(1-t)^{n-i}
+$$
+$$
+r(t)=\sum_{i=0}^nB_i(t)r_i
+$$
+### Catmill-Rom spline
+
 # Transzformációk
 # 2D képszintézis
 # OpenGL és GPU programozás
