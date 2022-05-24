@@ -34,6 +34,13 @@ $$
 $$
 # Geometriai modellezés
 ## Pontok definíciója
+## Segítő műveletek
+$$
+Távolság: |p-q|\\
+Merőleges: p\cdot q=0\\
+Párhuzamos: p\times q=0\\
+Vetület: v^0\cdot p
+$$
 ## Egyenes
 Egyenes implicit egyenlete
 $$
@@ -46,12 +53,64 @@ $$
 ax+by+c=0
 $$
 ## Kör
+Ugyanakkora távolság egy ponttól
 $$
-|r-p|=R
+|r-c|=R
 $$
 $$
-(x-p_x)^2+(y-p_y)^2-R^2=0
+(x-c_x)^2+(y-c_y)^2-R^2=0
 $$
+## Ellipszis
+Ugyanakkora legyen a távolság összege 2 ponttól (fókuszponttól)
+$$
+|r-f_1|+|r-f_2|=C
+$$
+## Hiperbola
+Ugyanakkora legyen a távolság külöbsége két ponttól
+$$
+|r-f_1|-|r-f_2|=C
+$$
+## Parabola
+Azon pontok halamaza, amelynek a ponttól mér távolsága megyezik egy egyenestől mért távolsággal
+$$
+|r-f|=|n^0\cdot(r-p)|
+$$
+## Kvadratikus görbék álltalános alakja
+$$
+f(x,y)=a_{11}x^2+a_{22}y^2+2a_{12}xy+2a_{13}x+2a_{23}y+3a_{33}
+$$
+$$
+f(x,y)=
+\begin{bmatrix}
+x&y&1
+\end{bmatrix}
+\begin{bmatrix}
+a_{11}&a_{12}&a_{13}\\
+a_{21}&a_{22}&a_{23}\\
+a_{31}&a_{32}&a_{33}\\
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y\\
+1\\
+\end{bmatrix}
+$$
+## Görbék
+### Egyenes
+- Parametrikus egyenlet  
+- Egy állandó sebességű mozgás
+$$
+x(t)=x_0+v_xt\\
+y(t)=y_0+v_yt\\
+z(t)=z_0+v_zt\\
+$$
+### Kör
+$$
+x(t)=c_x+Rcos(t)\\
+y(t)=c_y+Rsin(t)\\
+t\in[0,2\pi)
+$$
+
 # Transzformációk
 # 2D képszintézis
 # OpenGL és GPU programozás
