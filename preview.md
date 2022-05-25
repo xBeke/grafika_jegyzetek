@@ -540,3 +540,16 @@ $-w>Z>w$
 $x_{pix}=v_w(x_{ndc}+1)/2+v_x$  
 $y_{pix}=v_h(y_{ndc}+1)/2+v_y$  
 $z_{pix}=(z_{ndc}+1)/2$  
+
+## Raszterizáció
+
+Pixelekkel való közelítés  
+
+Szakasz effektív rajzolás:  
+$y(x)=mx+b=y(x-1)+m$
+
+Háromszög raszterizálás
+- Pásztázunk
+- mekgeressük a beléő meg a kiléő pontot
+- közöttük színezzük a háromszöget
+
