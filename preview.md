@@ -553,3 +553,15 @@ Háromszög raszterizálás
 - mekgeressük a beléő meg a kiléő pontot
 - közöttük színezzük a háromszöget
 
+# OpenGL
+
+1. Virtuális világ
+2. Vektorizáljuk
+3. Modell T
+4. View T (kamera)
+5. Projekció T (kamera)
+6. Vágás
+7. ViewPort T
+8. Raszterizálás
+9. Pixel feldolgozá (fragment shader)
+10. Rasztertár
