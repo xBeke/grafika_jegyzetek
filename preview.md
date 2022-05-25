@@ -447,5 +447,20 @@ $z_p=x_p+y_pi=Re^{i\alpha}=Rcos\alpha+iRsin\alpha$
 - Forgatva nyújtás
   - $z_p'\cdot z_s$
 
-
-
+# 2D képszintézis
+1. Referencia helyzet
+2. Vektorizálás
+   1. Ponttal szakaszokkal és háromszögekkel közelítünk
+3. Modellezési transzformáció
+   1. Világ koordináta rendszer
+   2. Elviszi a saját helyére az alkazatot
+   3. Itt van az ablak is amit innentől kezdve viszünk magunkkal
+4. Kamera transzformáció
+   1. (-1,-1)(1,1) sarokpontba tarszformáljuk a kamerát és minden mást is vele
+   2. normalizált eszközkoordinátarendszer / vágási koordináta rendszer
+5. Vágás
+6. nézeti transzformáció
+   1. Átmegyünk fizikai képernyő koordináta rendszer
+   2. Figyeleme vesszük a képernyő tényleges méretét
+7. Raszterizáció
+   1. Melyik pixeleket kell beszínezni
