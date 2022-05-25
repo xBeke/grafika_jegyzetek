@@ -464,3 +464,33 @@ $z_p=x_p+y_pi=Re^{i\alpha}=Rcos\alpha+iRsin\alpha$
    2. Figyeleme vesszük a képernyő tényleges méretét
 7. Raszterizáció
    1. Melyik pixeleket kell beszínezni
+
+## Vektorizáció
+
+### Görbék
+
+Diszkrét pontokra vizsgáljuk a pontok helyét
+
+### Sokszögek
+
+Minden 4+ csúcsú ***egyszerű*** sokszögnek van diagonálja, azaz mindegyik felbontható diagonálok mentén.
+
+#### Fülek
+
+Ha $p_i$ fül, ha $p_{i-1} <-> p_{i+1}$ diagonál  
+Szakasz - szakasz metszéssel vizsgálható, h diagonál-e
+
+### View transzformáció
+
+A $(c_x,c_y)$ középpontú kamera ablakot és minden mást az origo-ba transzformálunk.
+
+
+$$
+[x_{world},y_{world},z_{world},1]\begin{bmatrix}
+1&0&0&0\\
+0&1&0&0\\
+0&0&1&0\\
+-c_x&-c_y&0&1\\
+\end{bmatrix}
+=[x_{cam},y_{cam},z_{cam},1]
+$$
