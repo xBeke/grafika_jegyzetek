@@ -426,8 +426,16 @@ $i^2=j^2=k^2=ijk=-1$
 - $ki=j$  
 - $ik=-j$  
 
+Szorzás
+- $[s_1,d_1]\cdot [s_2, d_2]=[s_1s_2-d_1d_2,s_1d_2+s_2d_1+d_1\times d_2]$
+
 Inverz
 - $q^{-1}=\frac{[s,-d]}{|q|2}$
+
+Forgatás
+- $q = [cos(\alpha /2),dsin(\alpha/2)], |d|=1$
+- $q\cdot [0,u]\cdot q^{-1}=[0,v]$
+  - v, az u elforgatottja a d körül alpha-val
 
 Pont:  
 $z_p=x_p+y_pi=Re^{i\alpha}=Rcos\alpha+iRsin\alpha$
