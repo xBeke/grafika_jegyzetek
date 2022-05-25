@@ -402,3 +402,42 @@ $$
 n_xX+n_yY+n_zZ+dw=0
 $$
 
+### Középpontos vetítés
+
+$$
+[x,y,z,1]
+\begin {bmatrix}
+1&0&0&0\\
+0&1&0&0\\
+0&0&1&1/d\\
+0&0&0&0
+\end {bmatrix}=[x,y,z,z/d]
+$$
+És innen homogén osztással megkaphatjuk a descartes koordinátákat
+
+## Kvaterniók
+$q=[s,x,y,z] = [s,d] = s+xi+yj+zk$  
+Gyakorlatilag egy 4 dimenziós vektor  
+$i^2=j^2=k^2=ijk=-1$  
+- $ij=k$  
+- $ji=-k$  
+- $jk=i$  
+- $kj=-i$  
+- $ki=j$  
+- $ik=-j$  
+
+Inverz
+- $q^{-1}=\frac{[s,-d]}{|q|2}$
+
+Pont:  
+$z_p=x_p+y_pi=Re^{i\alpha}=Rcos\alpha+iRsin\alpha$
+
+- Eltolás:
+  - $z_p'=z_p+z_t$  
+- Skálázás:
+  - $z_s=s,  z_p'\cdot z_s$  
+- Forgatva nyújtás
+  - $z_p'\cdot z_s$
+
+
+
