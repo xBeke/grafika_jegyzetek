@@ -451,11 +451,11 @@ $z_p=x_p+y_pi=Re^{i\alpha}=Rcos\alpha+iRsin\alpha$
 1. Referencia helyzet
 2. Vektorizálás
    1. Ponttal szakaszokkal és háromszögekkel közelítünk
-3. Modellezési transzformáció
+3. Modellezési transzformáció (M)
    1. Világ koordináta rendszer
    2. Elviszi a saját helyére az alkazatot
    3. Itt van az ablak is amit innentől kezdve viszünk magunkkal
-4. Kamera transzformáció
+4. Kamera transzformáció (VP)
    1. (-1,-1)(1,1) sarokpontba tarszformáljuk a kamerát és minden mást is vele
    2. normalizált eszközkoordinátarendszer / vágási koordináta rendszer
 5. Vágás
@@ -480,10 +480,13 @@ Minden 4+ csúcsú ***egyszerű*** sokszögnek van diagonálja, azaz mindegyik f
 Ha $p_i$ fül, ha $p_{i-1} <-> p_{i+1}$ diagonál  
 Szakasz - szakasz metszéssel vizsgálható, h diagonál-e
 
+### Modell
+
+Beállítjuk az éppen vizsgűált objektum helyét orientációját és nagyságát, a korábban már említett, forgatés, eltolás, skálázás műveletekkel.
+
 ### View transzformáció
 
 A $(c_x,c_y)$ középpontú kamera ablakot és minden mást az origo-ba transzformálunk.
-
 
 $$
 [x_{world},y_{world},z_{world},1]\begin{bmatrix}
@@ -494,3 +497,46 @@ $$
 \end{bmatrix}
 =[x_{cam},y_{cam},z_{cam},1]
 $$
+
+### Projekció
+
+A $(w_x,w_y)$oldalhosszúságú ablak ra illesztjük a kamera nézetünket, így kapjuk a normalizált eszköz koordináta nézetet (ndc)
+
+$$
+[x_{cam},y_{cam},z_{cam},1]\begin{bmatrix}
+2/w_x&0&0&0\\
+0&2/w_y&0&0\\
+0&0&1&0\\
+0&0&0&1\\
+\end{bmatrix}
+=[x_{ndc},y_{ndc},z_{ndc},1]
+$$
+
+### Vágás
+
+Félsíkokra vágunk az ablak mind a 4 oldalán.  
+Vágás homogén koordinátákkal:  
+$-1<x=X/w<1$  
+$-1<y=Y/w<1$  
+$-1<z=Z/w<1$  
+
+HA $w>0$  
+$-w<X<w$  
+$-w<Y<w$  
+$-w<Z<w$  
+
+HA $w<0$  
+$-w>X>w$  
+$-w>Y>w$  
+$-w>Z>w$  
+
+### Viewport transzmormáció
+
+1. Eltolunk $(0,0)$ és $(2,2)$-be
+2. Skálázunk a kívánt ablakméretre
+3. Osztunk 2 vel
+4. Eltolunk a végleges helyre az ablakon
+
+$x_{pix}=v_w(x_{ndc}+1)/2+v_x$  
+$y_{pix}=v_h(y_{ndc}+1)/2+v_y$  
+$z_{pix}=(z_{ndc}+1)/2$  
