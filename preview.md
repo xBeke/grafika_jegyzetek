@@ -89,10 +89,17 @@ x_2&y_2&z_2\\
 $$
 
 ## Gradiens
+
 Maximális növekedés iránya és rátája  
 Merőleges az irányvektorral
 
 # Differenciál geometria
+
+## Síkgörbék érintője
+
+$T^0$ Érintő egység vektor  
+$N^0$ Normál egységvektor  
+$(N_x,N_y)=(-T_y,T_x)$ A két vektor merőleges egymásra
 
 ## Görbület
 
@@ -100,11 +107,42 @@ $$
 \frac{N*r''}{r'^2}
 $$
 
+## Paraméteres felületek normálvektora
+
+$$
+N(U,V)= \frac{\delta r(u,v)}{\delta u}\times \frac{\delta r(u,v)}{\delta v}
+$$
+
+## I. fundamentális forma
+
+Mekkorát lépünk a skon, ha u Δu-val és v Δv-vel változik?
+
+$$
+\Delta s^2 = \Delta s \cdot \Delta s = r'^2_u \Delta u^2+2r'_u \cdot r'_v \Delta u \Delta v + r'^2_v \Delta v^2
+$$
+
+$$
+\Delta s^2 = [\Delta u \Delta v]
+\begin{bmatrix}
+r'_u\cdot r'_u & r'_u\cdot r'_v\\
+r'_u\cdot r'_v & r'_v\cdot r'_v\\   
+\end{bmatrix}
+\begin{bmatrix}
+\Delta u\\
+\Delta v\\
+\end{bmatrix}
+$$
+
+## II. Fundametális forma
+
+
+
 # Geometriai modellezés
 
 ## Pontok definíciója
 
 ## Segítő műveletek
+
 $$
 Távolság: |p-q|
 $$
