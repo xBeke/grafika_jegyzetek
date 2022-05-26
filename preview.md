@@ -135,7 +135,19 @@ $$
 
 ## II. Fundametális forma
 
+Mennyire távolodunk a síktól, ha u ∆u-val, v pedig ∆v-vel változik?
 
+$$
+h(\Delta u, \Delta v)=\frac{1}{2} [\Delta u \Delta v]
+\begin{bmatrix}
+N \cdot r''_{uu}& N \cdot r''_{uv}\\
+N \cdot r''_{uv}& N \cdot r''_{vv}\\
+\end{bmatrix}
+\begin{bmatrix}
+\Delta u\\
+\Delta v\\
+\end{bmatrix}
+$$
 
 # Geometriai modellezés
 
