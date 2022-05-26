@@ -7,35 +7,86 @@ output: pdf_document
 ---
 # Geometriák és algebrák
 
-## Euklidészi síkgeometria
+## Görék görbülete
 
-Pontok  
-Vektorok  
-Egyenes  
+$$
+a_{cp}=\frac{v^2}{R}
+$$
 
-- Paraméteres egyenlet
-- Implicit egyenlet
-- Távolság
-- Szög
+Főgörbületi irányok
 
-## Gömbi geometria
+$$
+K=\kappa_1\kappa_2=a_{min}\cdot a_{max}
+$$
 
-## Hiperbolikus geometria
+## Vektroalgebra
 
-## Poincaré diszk
+### Összeadás
 
-## Projektív geometria
+Eltolás
 
-## Műveletek vetorokkal
-- Összeadás
-  - Eltolás
-- Kivonás
-  - a-b => b-ből a-ba mutató vektor
-- Skalárral való szorzás
-  - Egyik vetkor vetülete a másikra * másik hossza
-- Kereszt szorzat
-  - Egyik vektor vetülete a másikra merőleges síkra
-  - Sakktábla szabály
+$$
+v=v_1+v_2 (kom,asszoc)
+$$
+
+### Kivonás
+
+Egyik vektorból a másikba mutató vektor
+
+$$
+v=v_1-v_2
+$$
+
+### Skálázás
+
+$$
+v_1=\alpha v (dist)
+$$
+
+### Skalár szorzat
+
+Egyik vetkor vetülete a másikra * másik hossza
+
+$$
+v_1 \cdot v_2 = |v_1||v_2|cos(\alpha)
+$$
+
+### Metrika
+
+- $v\cdot v=|v|^2$
+- $|v|=\sqrt{v\cdot v}$
+- $v^0 = v/ \sqrt{v\cdot v}$
+- $v_1\cdot v_2 / |v_1||v_2|=cos(\alpha)$
+- Ha két vektor merőleges, a skalárszorzatuk nulla
+- Egyik vetkor vetülete a másikra * másik hossza
+
+### Vektor kereszt szorzat
+
+Egyik vektor vetülete a másikra merőleges síkra  
+Sakktábla szabály
+
+$$
+|v_1\times v_2|=|v_1||v_2|sin(\alpha)
+$$
+
+- Nem asszociatív
+- Disztributív
+
+$$
+v_1 \times v_2 =(x_1e_1+y_1e_2+z_1e_3)\times (x_2e_1+y_2e_2+z_2e_3)=
+$$
+
+$$
+(y_1z_2-y_2z_1)e_1-(z_2x_1-z_1x_2)e_2+(x_1y_2-x_2y_1)e_3=
+$$
+
+$$
+\begin {bmatrix}
+e_1&e_2&e_3\\
+x_1&y_1&z_1\\
+x_2&y_2&z_2\\
+\end {bmatrix}
+$$
 
 ## Gradiens
 Maximális növekedés iránya és rátája  
@@ -44,6 +95,7 @@ Merőleges az irányvektorral
 # Differenciál geometria
 
 ## Görbület
+
 $$
 \frac{N*r''}{r'^2}
 $$
