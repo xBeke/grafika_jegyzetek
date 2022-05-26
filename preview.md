@@ -332,7 +332,8 @@ v_i=\frac{1}{2} \left(
     - $y(u,v)=c_y+Rsin(u)sin(v)$
     - $z(u,v)=c_z+Rcos(v)$
     - $u\in[0,2\pi),v\in[0,\pi)$
-    - 
+
+
 ### Implicit felületek
 
 #### Gömb
@@ -543,18 +544,22 @@ $i^2=j^2=k^2=ijk=-1$
 - $ki=j$  
 - $ik=-j$  
 
-Szorzás
+Szorzás  
+
 - $[s_1,d_1]\cdot [s_2, d_2]=[s_1s_2-d_1d_2,s_1d_2+s_2d_1+d_1\times d_2]$
 
-Inverz
+Inverz  
+
 - $q^{-1}=\frac{[s,-d]}{|q|2}$
 
-Forgatás
+Forgatás  
+
 - $q = [cos(\alpha /2),dsin(\alpha/2)], |d|=1$
 - $q\cdot [0,u]\cdot q^{-1}=[0,v]$
   - v, az u elforgatottja a d körül alpha-val
 
 Pont  
+
 - $z_p=x_p+y_pi=Re^{i\alpha}=Rcos\alpha+iRsin\alpha$
 
 Műveletek
@@ -686,3 +691,29 @@ Háromszög raszterizálás
 8. Raszterizálás
 9. Pixel feldolgozá (fragment shader)
 10. Rasztertár
+
+# Fraktálok
+
+## Koch görbe
+
+$$
+l_n = l_0 ( \frac{4}{3}) => inf
+$$
+
+Seholsem diferenciálható
+
+## Lindenmayer rendszerek
+
+F+60F-120F+60F
+
+## Hausdorf Dimenzió
+
+r = hasonlósági transzformáció  
+N = hány részből áll  
+
+$$
+D = \frac{log(N)}{log(1/r)}
+$$
+
+## Önhasonló objektumok
+
