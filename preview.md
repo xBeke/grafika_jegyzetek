@@ -150,6 +150,12 @@ N \cdot r''_{uv}& N \cdot r''_{vv}\\
 \end{bmatrix}
 $$
 
+## Görbület 
+
+$$
+S=II\cdot I^{-1}
+$$
+
 # Geometriai modellezés
 
 ## Pontok definíciója
