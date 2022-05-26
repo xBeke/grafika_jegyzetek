@@ -264,7 +264,7 @@ $$
 
 ### Hermite interpoláció
 
-- nem csak helyet adunk meg hanem:
+- Nem csak helyet adunk meg hanem:
   - Sebesség (r')
   - Gyorsulás (r'')
 - Ami a számításhoz kell:
@@ -418,7 +418,7 @@ $$
 
 ## Projektív sík
 
->Homogén koordinátákkal számszerűsíthetjük a végtelent
+Homogén koordinátákkal számszerűsíthetjük a végtelent
 
 ### Euklidészi pont
 
@@ -433,14 +433,17 @@ $$
 $$
 
 Homogén osztással, visszatérhetünk az Euklidészi térbe:
+
 $$
 x=\frac{X}{w}, y=\frac{Y}{w}, w\not ={0}
 $$
 
 Ideális pont:
+
 $$
 [X,Y,0]
 $$
+
 Itt találkoznak a végtelenben az egyenesek
 
 ### Projektív egyenes
@@ -467,7 +470,7 @@ Itt találkoznak a végtelenben az egyenesek
 
 ## Projektív tér
 
->Homogén koordinátákkal számszerűsíthetjük a végtelent
+Homogén koordinátákkal számszerűsíthetjük a végtelent
 
 ### Euklidészi pont
 
@@ -482,14 +485,17 @@ $$
 $$
 
 Homogén osztással, visszatérhetünk az Euklidészi térbe:
+
 $$
 x=\frac{X}{w}, y=\frac{Y}{w},z=\frac{Z}{w}, w\not ={0}
 $$
 
 Ideális pont:
+
 $$
 [X,Y,Z,0]
 $$
+
 Itt találkoznak a végtelenben az egyenesek
 
 ### Egyenes paraméteres egyenlete
@@ -515,9 +521,11 @@ $$
 0&0&0&0
 \end {bmatrix}=[x,y,z,z/d]
 $$
+
 És innen homogén osztással megkaphatjuk a descartes koordinátákat
 
 ## Kvaterniók
+
 $q=[s,x,y,z] = [s,d] = s+xi+yj+zk$  
 Gyakorlatilag egy 4 dimenziós vektor  
 $i^2=j^2=k^2=ijk=-1$  
@@ -539,8 +547,10 @@ Forgatás
 - $q\cdot [0,u]\cdot q^{-1}=[0,v]$
   - v, az u elforgatottja a d körül alpha-val
 
-Pont:  
-$z_p=x_p+y_pi=Re^{i\alpha}=Rcos\alpha+iRsin\alpha$
+Pont  
+- $z_p=x_p+y_pi=Re^{i\alpha}=Rcos\alpha+iRsin\alpha$
+
+Műveletek
 
 - Eltolás:
   - $z_p'=z_p+z_t$  
@@ -550,6 +560,7 @@ $z_p=x_p+y_pi=Re^{i\alpha}=Rcos\alpha+iRsin\alpha$
   - $z_p'\cdot z_s$
 
 # 2D képszintézis
+
 1. Referencia helyzet
 2. Vektorizálás
    1. Ponttal szakaszokkal és háromszögekkel közelítünk
@@ -618,6 +629,7 @@ $$
 
 Félsíkokra vágunk az ablak mind a 4 oldalán.  
 Vágás homogén koordinátákkal:  
+
 $-1<x=X/w<1$  
 $-1<y=Y/w<1$  
 $-1<z=Z/w<1$  
