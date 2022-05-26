@@ -5,6 +5,7 @@ date: May 24, 2022
 geometry: margin=2cm
 output: pdf_document
 ---
+
 # Geometriák és algebrák
 
 ## Görék görbülete
@@ -115,7 +116,7 @@ $$
 
 ## I. fundamentális forma
 
-Mekkorát lépünk a skon, ha u Δu-val és v Δv-vel változik?
+Mekkorát lépünk a skon, ha u $\Delta u$-val és v $\Delta v$-vel változik?
 
 $$
 \Delta s^2 = \Delta s \cdot \Delta s = r'^2_u \Delta u^2+2r'_u \cdot r'_v \Delta u \Delta v + r'^2_v \Delta v^2
@@ -135,7 +136,7 @@ $$
 
 ## II. Fundametális forma
 
-Mennyire távolodunk a síktól, ha u ∆u-val, v pedig ∆v-vel változik?
+Mennyire távolodunk a síktól, ha u $\Delta u$-val és v $\Delta v$-vel változik?
 
 $$
 h(\Delta u, \Delta v)=\frac{1}{2} [\Delta u \Delta v]
